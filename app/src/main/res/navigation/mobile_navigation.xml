@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.smartparkingsystem.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_addparking"
+            app:destination="@id/nav_addparking" />
+        <action
+            android:id="@+id/action_nav_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_bookparking"
+            app:destination="@id/nav_bookparking" />
+        <action
+            android:id="@+id/action_nav_home_to_parkinghistoryFragment"
+            app:destination="@id/parkinghistoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_addparking"
+        android:name="com.example.smartparkingsystem.ui.ADDPARKING.Addparkingfragment"
+        android:label="@string/menu_Addparking"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_bookparking"
+        android:name="com.example.smartparkingsystem.ui.BOOKPARKING.Bookparkingfragment"
+        android:label="@string/menu_Bookparking"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/parkinghistoryFragment"
+        android:name="com.example.smartparkingsystem.ui.PARKINGHISTORY.ParkinghistoryFragment"
+        android:label="fragment_parkinghistory"
+        tools:layout="@layout/fragment_parkinghistory" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smartparkingsystem.ui.PROFILE.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
